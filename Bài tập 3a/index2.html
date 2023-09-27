@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chức năng 2</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 5px;
+            background-color: rgb(77, 68, 68);
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton">Đổi màu</button>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        const colorButton = document.getElementById('colorButton');
+        const boxes = document.querySelectorAll('.box');
+        let red = true;
+
+        colorButton.addEventListener('click', function () {
+            red = !red;
+            boxes.forEach((box, index) => {
+                if (index % 2 === 0) {
+                    box.style.backgroundColor = red ? 'red' : 'blue';
+                } else {
+                    box.style.backgroundColor = red ? 'blue' : 'red';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

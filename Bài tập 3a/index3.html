@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chức năng 3</title>
+</head>
+<body>
+    <input type="text" id="MauNen" placeholder="Màu nền">
+    <input type="text" id="MauChu" placeholder="Màu chữ">
+    <input type="text" id="TieuDe" placeholder="Tiêu đề">
+    <input type="text" id="TrangThai" placeholder="Trạng thái">
+    <button id="ThayDoi">Thay đổi</button>
+
+    <script>
+        const MauNen = document.getElementById('MauNen');
+        const MauChu = document.getElementById('MauChu');
+        const TieuDe = document.getElementById('TieuDe');
+        const TrangThai = document.getElementById('TrangThai');
+        const ThayDoi = document.getElementById('ThayDoi');
+
+        ThayDoi.addEventListener('click', function () {
+            document.body.style.backgroundColor = MauNen.value;
+            document.body.style.color = MauChu.value;
+            document.title = TieuDe.value;
+            window.status = TrangThai.value;
+        });
+    </script>
+</body>
+</html>

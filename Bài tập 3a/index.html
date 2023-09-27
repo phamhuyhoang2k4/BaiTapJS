@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chức năng 1</title>
+</head>
+<body>
+    <input type="text" id="numberInput" placeholder="Nhập số">
+    <button id="printButton">In số</button>
+    <div id="output"></div>
+
+    <script>
+        const printButton = document.getElementById('printButton');
+        const numberInput = document.getElementById('numberInput');
+        const output = document.getElementById('output');
+
+        printButton.addEventListener('click', function () {
+            const value = parseInt(numberInput.value);
+            if (!isNaN(value)) {
+                let result = '';
+                for (let i = 1; i <= value; i++) {
+                    result += i + ' ';
+                }
+                output.textContent = result;
+            }
+        });
+    </script>
+</body>
+</html>
